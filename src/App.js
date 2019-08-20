@@ -10,7 +10,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    return fetch(process.env.REACT_APP_BACKEND_URL + '/')
+    return fetch(process.env.REACT_APP_BACKEND_URL)
       .then(res => res.json())
       .then(data => this.setState({ friends: data.friends }))
       .catch(error => Error("Error fetching friends"));
